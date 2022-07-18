@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="src/assets/cat.svg" width="200" height="200">
+</p>
+
 # Blog
 
 This is just my study project, I did to improve my skills :)
