@@ -14,32 +14,41 @@ const Header = () => {
     };
 
     return (
-        <Grid
-            container
-            sx={{
-                boxSizing: 'border-box',
+        <div
+            style={{
                 width: '100%',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                padding: 1,
                 backgroundColor: '#ffffff',
             }}
         >
-            <Link to='/'>
-                <img src={img} style={{maxWidth: '100px'}}/>
-            </Link>
-            <Grid container sx={{maxWidth: '500px'}}>
-                <Tabs
-                    onChange={handleChange}
-                    value={value}
-                    aria-label="Tabs where each tab needs to be selected manually"
-                >
-                    <Tab component={Link} to='/' label="Home" />
-                    <Tab component={Link} to='/about' label="About" />
-                    <Tab component={Link} to='/posts' label="Posts" />
-                </Tabs>
+            <Grid
+                container
+                sx={{
+                    boxSizing: 'border-box',
+                    maxWidth: '800px',
+                    width: '100%',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    mx: 'auto',
+                    padding: 1,
+                    backgroundColor: '#ffffff',
+                }}
+            >
+                <Link to='/'>
+                    <img src={img} style={{maxWidth: '100px'}}/>
+                </Link>
+                <Grid container sx={{maxWidth: '500px', justifyContent: 'end'}}>
+                    <Tabs
+                        onChange={handleChange}
+                        value={value}
+                        aria-label="Tabs where each tab needs to be selected manually"
+                    >
+                        <Tab component={Link} to='/' label="Home" />
+                        <Tab component={Link} to='/about' label="About" />
+                        <Tab component={Link} to='/posts' label="Posts" />
+                    </Tabs>
+                </Grid>
             </Grid>
-        </Grid>
+        </div>
     );
 };
 
