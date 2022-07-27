@@ -7,7 +7,7 @@ import Select from '@mui/material/Select';
 
 const PostsFilter = ({filter, setFilter}) => {
     return (
-        <div>
+        <div style={{maxWidth: '800px', margin: '0 auto'}}>
             <TextField
                 id="standard-basic"
                 label="Search"

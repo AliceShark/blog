@@ -25,17 +25,15 @@ const PostPage = () => {
     });
 
     return (
-        <Box>
-            <Paper elevation={3}>
-                <Typography variant="h4" component="h2">
-                    {post.title}
-                </Typography>
-                <p>{post.body}</p>
-                {comments.map((comment) =>
-                        <Comment key={comment.id} comment={comment} />
-                    )
-                }
-            </Paper>
+        <Box sx={{maxWidth: '800px', mx: 'auto', my: 2}}>
+            <Typography variant="h2" component="h1">
+                {post.title}
+            </Typography>
+            <p style={{textAlign: 'center', marginBottom: '50px'}}>{post.body}</p>
+            {comments.map((comment) =>
+                    <Comment key={comment.id} comment={comment} />
+                )
+            }
         </Box>
     );
 };
